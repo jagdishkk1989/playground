@@ -12,9 +12,9 @@ plugins {
 }
 
 android {
-  buildFeatures {
+  /*buildFeatures {
     compose = true
-  }
+  }*/
 
   setCompileSdkVersion(29)
 

@@ -2,6 +2,7 @@ import org.gradle.api.artifacts.dsl.RepositoryHandler
 import org.gradle.api.artifacts.repositories.MavenArtifactRepository
 import org.gradle.kotlin.dsl.maven
 
+<<<<<<< Updated upstream
 fun RepositoryHandler.android(): MavenArtifactRepository = google {
   content {
     includeGroupByRegex("androidx.*")
@@ -10,6 +11,18 @@ fun RepositoryHandler.android(): MavenArtifactRepository = google {
     includeGroupByRegex("zipflinger.*")
 
     includeModule("org.jetbrains.kotlin", "kotlin-compiler-embeddable")
+=======
+val RepositoryHandler.android: MavenArtifactRepository
+  get() = google {
+    content {
+      includeGroupByRegex("androidx.*")
+      includeGroupByRegex("com\\.android.*")
+      includeGroupByRegex("com\\.google.*")
+      includeGroupByRegex("zipflinger.*")
+
+      includeGroup("org.jetbrains.kotlin")
+    }
+>>>>>>> Stashed changes
   }
 }
 
