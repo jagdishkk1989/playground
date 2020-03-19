@@ -3,17 +3,17 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
   id("com.android.application")
   id("com.github.ben-manes.versions")
+  id("com.osacky.doctor")
 
   kotlin("android")
   kotlin("android.extensions")
   kotlin("kapt")
-
-  id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
   buildFeatures {
     compose = true
+    dataBinding = true
   }
 
   setCompileSdkVersion(29)
@@ -33,10 +33,6 @@ android {
     versionName = "3.0"
 
     vectorDrawables.useSupportLibrary = true
-  }
-
-  dataBinding {
-    isEnabled = true
   }
 
   sourceSets {

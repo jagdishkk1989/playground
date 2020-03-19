@@ -1,4 +1,5 @@
 plugins {
+  `kotlin-android` // https://issuetracker.google.com/issues/123491449
   `kotlin-dsl`
 }
 
